@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather Fits</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <section class="top-banner">
+            <div class="container">
+                <h1 class="heading">Weather Fits</h1>
+                <form >
+                    <input type="text" placeholder="What's your city?" autofocus>
+                    <button type="submit">SUBMIT</button>
+                    <span class="msg"></span>
+                </form>
+            </div>
+        </section>
+        <section class="ajax-section">
+            <div class="container">
+                <ul class="cities">
+                    <li class="city">
+                        <h2 class="city-name" data-name="...">
+                            <span>...</span>
+                            <sup>...</sup>
+                        </h2>
+                    <span class="city-temp">...<sup>°F</sup></span>
+                    <figure>
+                        <img src="" alt="city icon" class="city icon">
+                        <figcaption>...</figcaption>
+                    </figure>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
