@@ -8,8 +8,8 @@ const list = document.querySelector(".ajax-section .cities");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const inputVal = input.value
-    const apiKey = 
-    const url = 'https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=imperial'
+    const apiKey = ''
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=imperial`
 
     fetch(url)
         .then(response => response.json())
@@ -33,7 +33,7 @@ form.addEventListener("submit", (e) => {
         li.innerHTML = markup
         list.appendChild(li)
         })
-        .catch(() => {
-            msg.textContent("Please search for a real city!")
+        .catch((err) => {
+            msg.textContent(err)
         })
 });
