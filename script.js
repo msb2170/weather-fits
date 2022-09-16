@@ -3,13 +3,12 @@ const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner msg");
 const list = document.querySelector(".ajax-section .cities");
 
-
+import {api_key as apiKey} from './config.js'
 
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const inputVal = input.value
-    const apiKey = ''
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=imperial`
 
     fetch(url)
