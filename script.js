@@ -5,6 +5,7 @@ const list = document.querySelector(".ajax-section .cities");
 
 
 
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     const inputVal = input.value
@@ -37,3 +38,10 @@ form.addEventListener("submit", (e) => {
             msg.textContent(err)
         })
 });
+
+form.addEventListener('submit', (e) => {
+    if (main.temp > -100) {
+        const fit_rec = document.createElement('h3')
+        fit_rec.innerHTML = 'clothes'
+    }
+})
