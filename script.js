@@ -3,7 +3,7 @@ const input = document.querySelector(".top-banner input");
 const msg = document.querySelector(".top-banner msg");
 const list = document.querySelector(".ajax-section .cities");
 
-import {api_key as apiKey} from './config.js'
+
 
 
 form.addEventListener("submit", (e) => {
