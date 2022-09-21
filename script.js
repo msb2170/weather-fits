@@ -32,11 +32,25 @@ form.addEventListener("submit", (e) => {
             `;
             li.innerHTML = markup
             list.appendChild(li)
-            if (main.temp > -100) {
-        desc.innerHTML = `<h1>You Should Wear...</h1>
-        <h3>Clothes</h3>
-        `
-    }
+            if (main.temp <= 0) {
+            desc.innerHTML = `<h1>You Should Wear...</h1>
+            <h3>A thick coat, gloves, a hat, and warm pants</h3>`
+        } else if (main.temp > 0 && main.temp <= 32) {
+            desc.innerHTML = `<h1>You Should Wear...</h1>
+            <h3>A warm coat, gloves and a hat</h3>`
+        } else if (main.temp > 32 && main.temp <= 50) {
+            desc.innerHTML = `<h1>You Should Wear...</h1>
+            <h3>A warm coat</h3>`
+        } else if (main.temp > 50 && main.temp <= 70) {
+            desc.innerHTML = `<h1>You Should Wear...</h1>
+            <h3>A light jacket</h3>`
+        } else if (main.temp > 70 && main.temp <= 90) {
+            desc.innerHTML = `<h1>You Should Wear...</h1>
+            <h3>shorts and a t-shirt</h3>`
+        } else {
+            desc.innerHTML = `<h1>You Should Wear...</h1>
+            <h3>nothing, if you can get away with it</h3>`
+        }
         })
         .catch((err) => {
             msg.textContent(err)
