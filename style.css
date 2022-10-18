@@ -23,10 +23,6 @@ button {
     cursor: pointer;
 }
 
-input {
-    -webkit-appearance: none;
-}
-
 button,
 input {
     border: none;
@@ -202,5 +198,15 @@ body {
     padding: 0.2em 0.6em;
     border-radius: 30px;
     color: var(--text_light);
-    background: var(--orange);
+    background: var(--text_med);
+}
+
+.x-button:hover {
+    cursor: pointer;
+}
+
+.x-button {
+    position: absolute;
+    top: 0.4em;
+    right: 0.4em;
 }
